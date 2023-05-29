@@ -83,31 +83,56 @@ button{
     color:#fff;  
     border: 2px solid #009688;
     background: #009688;
-    /* background: transparent; */
     cursor: pointer;
     position: relative;
     overflow: hidden;  
 }
-button:hover{
-    background: #009688;
-    box-shadow: 3px 3px  #929c9b;
-    border:none;
-}
-
-
-
-/* span{    
-    background: #009688;
-    width: 0;
-    height: 100%;
-    border-radius: 25px;
+button::after{
+    content:'';
+    height:2px;
+    width:0;
+    background:#f5f5f6;
     position: absolute;
     left:0;
-    bottom:0;
-    z-index:-1;
-    transition: 0.5s;
+    bottom:0px;
+    transition: 0.8s;
+    opacity: 0.5;
+}
+button:hover::after{
+    border-radius: 25px;
+    width:100%;
+    height: 100%;
 }
 
-button:hover span{ 
-    width:100%;
-} */
+/* for phone */
+@media only screen and (max-width: 667px) {
+    .banner{
+        width: 100%;
+        height: 130vh;
+        background-image:url('images/banner.jpg');
+        background-size: cover;
+        background-position: cover;
+    }
+    
+    .logo{
+        width: 100px;
+        cursor: pointer;
+    }
+
+    a{
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    h1{
+        font-size:40px;
+        margin-top:auto;
+    }
+    ul{
+        margin-left: 35px;
+    }
+    ul li{
+        margin: 0 5px;
+    }
+
+  }
